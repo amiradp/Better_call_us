@@ -1,15 +1,21 @@
 {% extends "_base.html" %}
 
 {% block content %}
-    <div class="container">
-        <h1>Better Call Us News</h1>
+    
+        <div class="container mt-3">
+            <div class="pt-2">
+                <h1>Better Call Us News</h1>
+                {% for post in post_detail %}
+                    <div class="pt-2">
+                        <ul>
+                            <h6>
+                                <li><a href="#">new our site</a> has online and you can order your our site on <a href="#">this<a/> and we create on for you</li>
+                            </h6>
+                                <p>{{ post.datetime_created }}</p>
+                        </ul>
+                    </div>   
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    {% for post in post_detail %}
-        <div class="container">
-            <ul>
-                <h6><li><a href="#">new our site</a> has online and you can order your our site on <a href="#">this<a/> and we create on for you</li></h6>
-                <p>this is a test massegase</p>
-            </ul>
-        </div>   
-    {% endfor %}
 {% endblock content %}
